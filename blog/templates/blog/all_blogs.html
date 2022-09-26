@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<div class="container text-center">
+<body> <h1 class="mb-3 fw-semibold" >
+Blog
+</h1>
+<h2 class="mb-3 fw-semibold">Daniar waw written blogs</h2>
+</body>
+</div>
+
+{% for blog in blogs %}
+
+{{ blog.title }}
+
+{% endfor %}
+
+</html>
