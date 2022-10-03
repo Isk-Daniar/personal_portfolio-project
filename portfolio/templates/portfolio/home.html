@@ -1,20 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-</head>
+{% extends 'portfolio/base.html' %}
+
+{% block title %}
+My portfolio
+{% endblock %}
+
+{% block content %}
+
+
 <div class="container text-center">
-<body>
+
 <h1>My portfolio</h1>
-</body>
-</div>
+
+
 
 {% load static %}
+</div>
 
-<a href="{% url 'blog:all_blogs' %}">Blog</a>
+<a class="btn btn-secondary btn-lg" href="{% url 'blog:all_blogs' %}">Blog</a>
 
+<div class="container text-center">
+<br>
 <img src="{% static 'portfolio/photo_2022-09-26_11-58-39.jpg' %}">
 
 {% for project in projects %}
@@ -27,4 +32,9 @@
 {% endif %}
 
 {% endfor %}
-</html>
+
+
+{% endblock %}
+
+</div>
+
